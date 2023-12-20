@@ -2280,7 +2280,7 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			font-family: 'Font Awesome 5 Free','Font Awesome 5 Brands','Font Awesome 6 Free','Font Awesome 6 Brands';
 			font-weight: 400;
 		}
 
@@ -2341,7 +2341,7 @@ input, select, textarea {
 				text-rendering: auto;
 				line-height: 1;
 				text-transform: none !important;
-				font-family: 'Font Awesome 5 Free';
+				font-family: 'Font Awesome 5 Free','Font Awesome 5 Brands','Font Awesome 6 Free','Font Awesome 6 Brands';
 				font-weight: 400;
 			}
 
