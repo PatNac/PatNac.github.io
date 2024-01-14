@@ -31,6 +31,7 @@
 					<header class="major special">
 						<h2>Global bike seller</h2>
 					</header>
+					<h3>Intro</h3>
 					<p>
 						This is a quick overview of an easy-to-understand dashboard created for 
 						a distributor of bikes and equipment. It displays plots and statistics 
@@ -49,20 +50,24 @@
 				</div>
 			</section>
 
-		<!-- Two -->
-			<section id="two" class="main style1 special">
-				<div class="container">
-				</div>
-			</section>
-
 		<!-- Three -->
 			<section id="three" class="main style1">
 				<div class="container">
 					<div class="row gtr-150">
 						<div class="col-6 col-12-medium">
-							<h2>Data cleaning and transformation</h2>
+							<h3>Data cleaning and transformation</h3>
 							<p>
-								Some text about it
+								The work starts by connecting to a data source. 
+								It could be a database, Excel file, web service, or other platforms.
+								After selecting relevant columns and tables, exploration of the imported 
+								data follows  to understand its structure, relationships, and quality. 
+								This involves checking data types, identifying missing values, 
+								and understanding the distribution of data. Corrections are made at 
+								this stage to ensure optimal data quality for future loads.
+							</p>
+							<p>
+								If necessary, additional actions take place here, such as filtering rows, 
+								renaming columns or enriching the data by creating calculated columns. 
 							</p>
 						</div>
 						<div class="col-6 col-12-medium imp-medium">
@@ -77,15 +82,21 @@
 				<div class="container">
 					<div class="row gtr-150">
 						<div class="col-6 col-12-medium">
-							<span class="image fit"><img src="images/model.png" alt="" /></span>
+							<div class="col-6"><a href="images/model.png" target="_blank" class="image fit"><img src="images/model.png" alt="" /></a></div>
 						</div>
 						<div class="col-6 col-12-medium imp-medium">
-							<h2>Semantic model design</h2>
+							<h3>Semantic model design</h3>
 							<p>
-								Speaking of a quick introduction, I would say skilled Data Analyst 
-								from the Czech Republic with a passion 
-								(a bit overused cliché among freelancers but genuinely true in my case)
-								for Mathematics, Statistics, Modelling and adrenaline sports.
+								Power BI relies on accurate information about table 
+								relationships to ensure the seamless functioning of 
+								visuals and the correct application of filters with 
+								respect to the logic of the data. As you can see, 
+								the model follows a star schema, which is considered 
+								best practice. Notice the Date table in the bottom right 
+								corner. It is a calculated table necessary for the time 
+								dimension to work in visuals. Although Power BI is able to 
+								manage dates on its own, it is a matter of optimal performance 
+								to do it manually.
 							</p>
 						</div>
 					</div>
