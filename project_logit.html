@@ -23,14 +23,155 @@
 			</section>
 
 		<!-- One -->
-			<section id="one" class="main style1">
-				<div class="container">
-					<ul class="actions">
-						<li><a href="index.html#three" class="button">Back</a></li>
-					</ul>
+		<section id="one" class="main style1">
+			<div class="container">
+				<ul class="actions">
+					<li><a href="index.html#three" class="button">Back</a></li>
+				</ul>
+				<header class="major">
+					<h2><b>Case study: CHURN</b></h2>
+				</header>
+				<p>
+					Portfolio managers from a telecommunications company asked me to help them understand which factors contribute to customer churn 
+					(customers leaving to competing companies) and also to predict which customers are most likely to churn.
+				</p>
+				<header class="major">
+					<h3><b>Results summary</b></h3>
+				</header>
+				<div class="row gtr-uniform gtr-150">
+					<div class="col-6 col-12-medium">
+						<table>
+						<caption>Logit Regression Results</caption>
+						<tbody><tr>
+						<th>Dep. Variable:</th> <td>churned_num</td> <th>  No. Observations:  </th> <td>  5476</td>
+						</tr>
+						<tr>
+						<th>Model:</th> <td>Logit</td> <th>  Df Residuals:      </th> <td>  5472</td>
+						</tr>
+						<tr>
+						<th>Method:</th> <td>MLE</td> <th>  Df Model:          </th> <td>     3</td>
+						</tr>
+						<tr>
+						<th>  Pseudo R-squ.:     </th> <td>0.1335</td>
+						<th>  Log-Likelihood:    </th> <td> -2735.5</td>
+						</tr>
+						<tr>
+						<th>converged:</th> <td>True</td> <th>  LL-Null:           </th> <td> -3157.0</td>
+						</tr>
+						<tr>
+						<th>Covariance Type:</th> <td>nonrobust</td> <th>  LLR p-value:       </th> <td>2.107e-182</td>
+						</tr>
+						</tbody></table>
+						<div class="col-6 col-12-medium"><a href="images/logit_roc.png" target="_blank" class="image fit"><img src="images/logit_roc.png" alt="" /></a></div>
+					</div>
+					<div class="col-6 col-12-medium">
+						<table>
+						<caption>Variables</caption>
+						<tbody><tr>
+						<td></td> <th>coef</th> <th>std err</th> <th>z</th> <th>P&gt;|z|</th> <th>[0.025</th> <th>0.975]</th>
+						</tr>
+						<tr>
+						<th>contract_type</th> <td>   -0.3636</td> <td>    0.035</td> <td>  -10.525</td> <td> 0.000</td> <td>   -0.431</td> <td>   -0.296</td>
+						</tr>
+						<tr>
+						<th>has_internet</th> <td>   -0.8810</td> <td>    0.045</td> <td>  -19.463</td> <td> 0.000</td> <td>   -0.970</td> <td>   -0.792</td>
+						</tr>
+						<tr>
+						<th>months_customer</th> <td>   -0.7855</td> <td>    0.050</td> <td>  -15.676</td> <td> 0.000</td> <td>   -0.884</td> <td>   -0.687</td>
+						</tr>
+						<tr>
+						<th>i_el_check</th> <td>   -0.3814</td> <td>    0.052</td> <td>   -7.392</td> <td> 0.000</td> <td>   -0.483</td> <td>   -0.280</td>
+						</tr>
+						</tbody></table>						
+							<table>
+								<caption>Train vs test sample performance (GINI coefficient)</caption>
+								<tbody>
+								<tr>
+								<td>train</td>
+								<td>0.667</td>
+								</tr>
+								<tr>
+								<td>test</td>
+								<td>0.631</td>
+								</tr>
+								<tr>
+								<td>abs diff</td>
+								<td>0.036</td>
+								</tr>
+								<tr>
+								<td>test rel diff</td>
+								<td>-0.054</td>
+								</tr>
+								</tbody>
+								</table>
+					</div>
 				</div>
-			</section>
+				<header class="major">
+					<h3><b>Interpretation</b></h3>
+				</header>
+				<p>
+					Portfolio managers from a telecommunications company asked me to help them understand which factors contribute to customer churn 
+					(customers leaving to competing companies) and also to predict which customers are most likely to churn.
+				</p>
+			</div>
+			
+		</section>
 
+	<!-- Three -->
+		<section id="three" class="main style1">
+			<div class="container">
+				<header class="major">
+					<h3><b>Methodology</b></h3>
+				</header>
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium">
+						<h3><b>Data cleaning and transformation</b></h3>
+						<p>
+							The work starts by connecting to a data source. 
+							It could be a database, Excel file, web service, or other platforms.
+							After selecting relevant columns and tables, exploration of the imported 
+							data follows  to understand its structure, relationships, and quality. 
+							This involves checking data types, identifying missing values 
+							and understanding the distribution of data. Corrections are made at 
+							this stage to ensure optimal data quality for future loads.
+						</p>
+						<p>
+							If necessary, additional actions take place here, such as filtering rows, 
+							renaming columns or enriching the data by creating calculated columns. 
+						</p>
+					</div>
+					<div class="col-6 col-12-medium imp-medium">
+						<span class="image"><img src="images/data_transform.png" alt="" /></span>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+	<!-- Four -->
+		<section id="four" class="main style1">
+			<div class="container">
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium">
+						<div class="col-6"><a href="images/model.png" target="_blank" class="image fit"><img src="images/model.png" alt="" /></a></div>
+					</div>
+					<div class="col-6 col-12-medium imp-medium">
+						<h3><b>Semantic model design</b></h3>
+						<p>
+							Power BI relies on accurate information about table 
+							relationships to ensure the seamless functioning of 
+							visuals and the correct application of filters with 
+							respect to the logic of the data. As you can see, 
+							the model follows a star schema, which is considered 
+							best practice. Notice the Date table in the bottom right 
+							corner. It is a calculated table necessary for the time 
+							dimension to work in visuals. Although Power BI is able to 
+							manage dates on its own, it is a matter of optimal performance 
+							to do it manually.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 		<!-- Four -->
 
 			<section id="four" class="main style2 special">
