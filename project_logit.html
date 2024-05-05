@@ -36,7 +36,7 @@
 					(customers leaving to competing companies) and also to predict which customers are most likely to churn.
 				</p>
 				<header class="major">
-					<h3><b>Results summary</b></h3>
+					<h3><b>Model results summary</b></h3>
 				</header>
 				<div class="row gtr-uniform gtr-150">
 					<div class="col-6 col-12-medium">
@@ -112,7 +112,24 @@
 				<p>
 					Portfolio managers from a telecommunications company asked me to help them understand which factors contribute to customer churn 
 					(customers leaving to competing companies) and also to predict which customers are most likely to churn.
+					According to the results, clients with the highest churn rate are
+					<ul>
+						<li>new clients,</li>
+						<li>clients paying month-to-month (without longer subscription plan),</li>
+						<li>clients paying via electronic check,</li>
+						<li>clients having internet among services.</li>
+					</ul>
 				</p>
+				<p>
+					<b>The takeaway message:</b>
+					<ul>
+						<li>The company is good at recruiting new clients but struggle to keep them.</li>
+						<li>The internet service is not competitive.</li>
+					</ul>
+					Using electronic check and month-to-month plan is probably not the reason for a client to leave but rather
+					the fact that the client wants to leave is the reason for them to use month-to-month plan and electronic check. 
+				</p>
+				
 			</div>
 			
 		</section>
@@ -121,57 +138,24 @@
 		<section id="three" class="main style1">
 			<div class="container">
 				<header class="major">
-					<h3><b>Methodology</b></h3>
+					<h3><b>Scripts and details</b></h3>
 				</header>
 				<div class="row gtr-150">
 					<div class="col-6 col-12-medium">
-						<h3><b>Data cleaning and transformation</b></h3>
 						<p>
-							The work starts by connecting to a data source. 
-							It could be a database, Excel file, web service, or other platforms.
-							After selecting relevant columns and tables, exploration of the imported 
-							data follows  to understand its structure, relationships, and quality. 
-							This involves checking data types, identifying missing values 
-							and understanding the distribution of data. Corrections are made at 
-							this stage to ensure optimal data quality for future loads.
+							<ul>
+								<li><a href="projects\logit\00_data_load.html">ETL (cleaning, missing values, new variables, train/test split, ...)</a></li>
+								<li><a href="projects\logit\01_univariate.html">Univariate analysis</a></li>
+								<li><a href="projects\logit\02_multivariate.html">Multivariate analysis</a></li>
+								<li><a href="projects\logit\03_model_select.html">Selection of variables into final model</a></li>
+								<li><a href="projects\logit\04_model_stats.html">Model results and performance</a></li>
+							</ul>
 						</p>
-						<p>
-							If necessary, additional actions take place here, such as filtering rows, 
-							renaming columns or enriching the data by creating calculated columns. 
-						</p>
-					</div>
-					<div class="col-6 col-12-medium imp-medium">
-						<span class="image"><img src="images/data_transform.png" alt="" /></span>
 					</div>
 				</div>
 			</div>
 		</section>
 	
-	<!-- Four -->
-		<section id="four" class="main style1">
-			<div class="container">
-				<div class="row gtr-150">
-					<div class="col-6 col-12-medium">
-						<div class="col-6"><a href="images/model.png" target="_blank" class="image fit"><img src="images/model.png" alt="" /></a></div>
-					</div>
-					<div class="col-6 col-12-medium imp-medium">
-						<h3><b>Semantic model design</b></h3>
-						<p>
-							Power BI relies on accurate information about table 
-							relationships to ensure the seamless functioning of 
-							visuals and the correct application of filters with 
-							respect to the logic of the data. As you can see, 
-							the model follows a star schema, which is considered 
-							best practice. Notice the Date table in the bottom right 
-							corner. It is a calculated table necessary for the time 
-							dimension to work in visuals. Although Power BI is able to 
-							manage dates on its own, it is a matter of optimal performance 
-							to do it manually.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
 		<!-- Four -->
 
 			<section id="four" class="main style2 special">
